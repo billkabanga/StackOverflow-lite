@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    background: #f3f3f3;
+    color: darkrey;
+
+}
+
+.container{
+    max-width: 960px;
+    width: 96%;
+    margin: auto;
+}
+/*---Header section-----*/
+header{
+    background: #fff;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.brand h2{
+    float: left;
+    margin-top: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    padding: 10px;   
+}
+
+nav{
+    float: right;
+    line-height: 70px;
+}
+
+nav li{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background: #ccc;
+    line-height: normal;
+    border-radius: 5px;
+    
+}
+
+nav a{
+    text-decoration: none;
+    font-family: CMU serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -----CONTENT------ */
+.content h2{
+    background: #ff4719;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content section{
+    float: left;
+    width: 600px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.content ul{
+    float: right;
+    width: 250px;
+    background: #338989;
+    list-style: none;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.content ul li{
+    color: white;
+    margin-bottom: 5px;
+}
+
+.content ul li a{
+    color: white;
+    margin-bottom: 5px;
+}
+
+/*----footer-----*/
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    height: 40px;
+    background: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
