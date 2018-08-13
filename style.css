@@ -310,7 +310,7 @@ ul#answers li h3{
     
  
 }
-
+/*---------catering for responsiveness------*/
 @media(max-width: 768px){
     header .brand,
     header nav,
@@ -357,11 +357,4 @@ ul#answers li h3{
         border-radius: 10px;
         margin-bottom: 10px;
     }
-
-
-
-
-
-    
- 
 }
