@@ -1,54 +1,112 @@
 body{
     margin: 0;
     padding: 0;
-    font-size: 15px;
+    font-size: 20px;
     background: #f3f3f3;
     color: darkrey;
 
 }
-
+/*----global stuff------*/
 .container{
     max-width: 960px;
-    width: 96%;
+    width: 100%;
     margin: auto;
+    overflow: hidden;
+}
+
+.button_i{
+    height: 35px;
+    background: #ff4719;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
 }
 /*---Header section-----*/
 header{
     background: #fff;
     margin-bottom: 20px;
     overflow: hidden;
+    min-height: 70px;
 }
 
-.brand h2{
+.brand h1{
     float: left;
-    margin-top: 10px;
-    background: #ccc;
+    margin-top: 9px;
+    background: #35424a;
     border-radius: 5px;
-    padding: 10px;   
+    padding: 10px;
+    color: white;   
 }
 
 nav{
     float: right;
     line-height: 70px;
+    margin-top: 6px;
 }
 
 nav li{
     display: inline-block;
     padding: 10px 20px;
     margin-left: 10px;
-    background: #ccc;
+    background: #35424a;
     line-height: normal;
     border-radius: 5px;
-    
+    color: white;
 }
 
 nav a{
     text-decoration: none;
     font-family: CMU serif;
+    color: white;
+}
+
+nav a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/*-------myShowcase-----------------*/
+#showcase{
+    min-height: 200px; 
+    background-color: #35424a;
+    text-align: center;
+    color: white;
+}
+
+#showcase h1{
+    margin-top: 50px;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
 }
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+p a{
+    text-decoration: none;
+}
+
+/*------search_part------*/
+#search{
+    padding: 15px;
+    color: white;
+    background: #35424a;
+}
+
+#search form{
+    float: right;
+
+}
+#search input[type="search"]{
+    padding: 4px;
+    height: 35px;
+    width: 250px;
 }
 
 /* -----CONTENT------ */
@@ -65,8 +123,12 @@ p {
     background: #fff;
     border-radius: 5px;
     padding: 10px;
-
 }
+.content section p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
 
 .content ul{
     float: right;
@@ -85,16 +147,162 @@ p {
 .content ul li a{
     color: white;
     margin-bottom: 5px;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.content ul li h3{
+    background: #35424a;
+    border-radius: 5px;
+    padding: 15px;
 }
 
 /*----footer-----*/
 
-.footer{
-    position: absolute;
-    bottom: 0;
-    width: 70%;
-    height: 40px;
-    background: #fff;
-    font-family: 'Courier New', Courier, monospace;
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #35424a;
+    text-align: center;
 }
 
+
+/*-----signup--------*/
+.signupbox{
+    width: 400px;
+    height: 600px;
+    background: #35424a;
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.signupbox h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.signupbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+}
+
+.signupbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.signupbox input[type="text"], input[type="password"], input[type="email"]{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.signupbox .button_i{
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.signupbox .button_i:hover{
+    cursor: pointer;
+    background: #338989;
+
+}
+/*-----------signin------*/
+
+#signinbox h1{
+    font-size: 30px;
+}
+
+#signinbox p a{
+    font-size: 12px;
+    line-height: 20px;
+    color: white;
+  
+}
+
+/*--------Profile_page-------*/
+/*---------most answers_Question list-------*/
+
+ul#answers li{
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul#answers li h3{
+    background: #35424a;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    margin-right: auto;
+    font-family: cmu serif;
+
+}
+
+#answer_list h1{
+    background: #ff4719;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.accept{
+    height: 35px;
+    background: #ff4719;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+#post{
+    padding: 20px;
+    background: #35424a;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 65%;
+    margin-left: 236px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+#post textarea{
+    height: 100px;
+    width: 65%;
+    padding: 5px;
+    float: left;
+}
+
+@media(max-width: 768px){
+    header .brand,
+    header nav,
+    header nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    #showcase h1{
+        margin-top: 40px;
+        font-size: 30px;
+    }
+    
+ 
+}
