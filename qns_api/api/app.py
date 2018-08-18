@@ -22,3 +22,13 @@ class questions_handler(Resource):
         return jsonify({'questions': questions})
 
 api.add_resource(questions_handler, '/questions')
+
+class specific_qn(Resource):
+    def get(self, question):
+        for question in questions:
+            if question['question'] == question:
+                return jsonify(question)
+        return jsonify({'message': 'question does not exist'})
+
+api.add_resource(specific_qn, '/questions/<string: question>')
+
