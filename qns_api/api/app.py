@@ -56,4 +56,3 @@ class add_answer(Resource):
 
 api.add_resource(add_answer, '/questions/<string: question>/answers')
 
-
