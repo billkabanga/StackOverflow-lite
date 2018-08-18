@@ -20,6 +20,16 @@ questions = [
 class questions_handler(Resource):
     def get(self):
         return jsonify({'questions': questions})
+    
+    def post(self):
+        request_data = request.get_json()
+        new_question = {
+            'qnId': 2,
+            'question': request_data['question'],
+            'answer': []
+        }
+        questions.append(new_question)
+        return jsonify(new_question)
 
 api.add_resource(questions_handler, '/questions')
 
