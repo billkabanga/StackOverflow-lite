@@ -42,3 +42,18 @@ class specific_qn(Resource):
 
 api.add_resource(specific_qn, '/questions/<string: question>')
 
+class add_answer(Resource):
+    def post(self,question):
+        request_data = request.get_json()
+        for question in questions:
+            if question['question'] == question:
+                new_answer = {
+                    'answer': request_data['answer']
+                }
+                question['answers'].append(new_answer)
+                return jsonify(new_answer)
+        return jsonify({'message': 'question not found'})
+
+api.add_resource(add_answer, '/questions/<string: question>/answers')
+
+
