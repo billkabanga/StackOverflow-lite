@@ -8,7 +8,8 @@ install:
     - pip install -r requirements.txt
 
 scripts:
-    - pytest && coverage report
+    - pytest 
+    - coverage report
 
 after_success:
     - coveralls
