@@ -1,0 +1,14 @@
+language: python
+
+python: 
+    - "3.6"
+
+#install dependencies
+install:
+    - pip install -r requirements.text
+
+Scripts:
+    - pytest && coverage report
+
+after_success:
+    - coveralls
