@@ -4,6 +4,8 @@ python:
     - "3.6"
 
 #install dependencies
+before_install: cd qns_api
+
 install:
     - pip install -r requirements.txt
 
