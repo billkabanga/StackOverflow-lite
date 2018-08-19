@@ -5,9 +5,9 @@ python:
 
 #install dependencies
 install:
-    - pip install -r requirements.text
+    - pip install -r requirements.txt
 
-Scripts:
+scripts:
     - pytest && coverage report
 
 after_success:
