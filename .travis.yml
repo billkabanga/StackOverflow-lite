@@ -10,8 +10,8 @@ install:
     - pip install -r requirements.txt
 
 script:
-    - pytest qns_api/tests
-    - coverage report
+    - pytest qns_api/tests --cov=qns_api/api --cov-report term-missing
+    
 
 after_success:
     - coveralls
