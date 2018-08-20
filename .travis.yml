@@ -11,7 +11,7 @@ install:
 
 script:
     - pytest qns_api/tests --cov=qns_api/api --cov-report term-missing
-    
+
 
 after_success:
     - coveralls
