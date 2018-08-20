@@ -10,7 +10,7 @@ install:
     - pip install -r requirements.txt
 
 scripts:
-    - cd qns_api && pytest
+    - cd qns_api && pytest tests
     - coverage report
 
 after_success:
