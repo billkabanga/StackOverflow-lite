@@ -3,7 +3,7 @@ body{
     padding: 0;
     font-size: 20px;
     background: #f3f3f3;
-    color: darkrey;
+    
 
 }
 /*----global stuff------*/
@@ -16,7 +16,7 @@ body{
 
 .button_i{
     height: 35px;
-    background: #ff4719;
+    background: #338989;
     border: 0;
     padding-left: 20px;
     padding-right: 20px;
@@ -115,10 +115,11 @@ p a{
 
 /* -----CONTENT------ */
 .content h2{
-    background: #ff4719;
+    background: #338989;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .content section{
@@ -261,15 +262,16 @@ ul#answers li h3{
 }
 
 #answer_list h1{
-    background: #ff4719;
+    background: #338989;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .accept{
     height: 35px;
-    background: #ff4719;
+    background: #338989;
     border: 0;
     padding-left: 20px;
     padding-right: 20px;
@@ -285,6 +287,8 @@ ul#answers li h3{
     margin-left: 236px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    height: 200px;
+    
 
 }
 
@@ -293,7 +297,18 @@ ul#answers li h3{
     width: 65%;
     padding: 5px;
     float: left;
+    display: block;
 }
+
+#post .button_i{
+    position: relative;
+    margin-top: 5px;  
+}
+
+#post .button_i:hover{
+    font-weight: bold; 
+}
+    
 
 @media(max-width: 768px){
     header .brand,
