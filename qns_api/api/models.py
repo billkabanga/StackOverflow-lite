@@ -1,5 +1,6 @@
 from flask import jsonify
 
+answers = []
 
 class questions(object):
     def __init__(self, qnId, question, answers):
