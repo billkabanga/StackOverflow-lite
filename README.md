@@ -52,7 +52,8 @@ To install all the required extensions for project, use the following command: `
 ## Running tests:
 **Testing the API endpoints.**
 Run the `run.py` file and test the endpoints in Postman as shown below:
-| url/endpoint                        | Verb          | Action              |      
+
+| url/endpoint                        | Verb          | Action                     |      
 | ----------------------------------- |:-------------:|  ------------------------- |
 | /api/v1/questions                   | GET           | get all questions          | 
 | /api/v1/questions/<int:qnId>        | GET           |specific questions          | 
