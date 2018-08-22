@@ -38,19 +38,30 @@ The link to the github feature branch with code for UI templates: (https://githu
 * Post an answer to a question.
 
 ## Getting the application on the local machine.
-Clone the remote repository to you local machine using the following URL: (https://github.com/billkabanga/StackOverflow-lite.git)
+Clone the remote repository to you local machine using the following command: `git clone https://github.com/billkabanga/StackOverflow-lite.git`
 
-You can now access the project on your local machine.
+You can now access the project on your local machine by pointing to the local repository using `cd` and `code .` if using Visual Studio code.
+Create a virtual environment in the local repository using the following code: `python -3 -m venv env`
+Activate the virtual environment: `env/Scripts/activate.bat`
+
+
 
 ## Installing dependencies.
-To install all the required extensions for project, use the following command: **pip install -r requirements.txt**
+To install all the required extensions for project, use the following command: `pip install -r requirements.txt`
 
 ## Running tests:
 **Testing the API endpoints.**
-Run the *run.py* file and test the endpoints in Postman.
+Run the `run.py` file and test the endpoints in Postman as shown below:
+| url/endpoint                        | Verb          | Action              |      
+| ----------------------------------- |:-------------:|  ------------------------- |
+| /api/v1/questions                   | GET           | get all questions          | 
+| /api/v1/questions/<int:qnId>        | GET           |specific questions          | 
+| /api/v1/questions                   | POST          | add questions              |
+| /api/v1/questions/<int:qnId>/answers| POST          | add an answer to a question|
+  
 
 **Running unittests for the API endpoints**
-Use the *pytest* command to run the tests.
+Use the `pytest qns_api/tests --cov=qns_api/api --cov-report term-missing`  command to run the tests and get the coverage report.
 
 >These tests should be performed in the virtual environment
 
