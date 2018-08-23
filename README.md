@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/billkabanga/StackOverflow-lite.svg?branch=API-feat)](https://travis-ci.org/billkabanga/StackOverflow-lite)
 [![Coverage Status](https://coveralls.io/repos/github/billkabanga/StackOverflow-lite/badge.svg?branch=API-feat)](https://coveralls.io/github/billkabanga/StackOverflow-lite?branch=API-feat)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/36d962fb6216d3be24f2/test_coverage)](https://codeclimate.com/github/billkabanga/StackOverflow-lite/test_coverage)
+
 
 # StackOverflow-lite
 This is a  python version of StackOverflow. A platform for questions and answers.It allows users to post questions and answers respectively.Users can also read different questions and their answers.
@@ -67,7 +67,7 @@ Use the `pytest qns_api/tests --cov=qns_api/api --cov-report term-missing`  comm
 >These tests should be performed in the virtual environment
 
 ## Deployment:
-Notes about deployment will be added once the project has been deployed on heroku.
+Heroku links: (https://bill-stack-over-flow.herokuapp.com/)
 
 ## Built with:
 **User Interface**
