@@ -52,10 +52,22 @@ class QuestionsTestCase(unittest.TestCase):
             answers=['this is the handling of unique situations']))
             self.assertEqual(response.status_code,201)
     
-    def test_invalid_question_posted(self):
+    def test_invalid_question_posted_integer(self):
         with self.client as client:
             response = client.post(BASE_URL,json=dict(question=4656))
-            self.assertEqual(response.status_code,406)   
+            self.assertEqual(response.status_code,406)  
+
+    def test_invalid_question_posted_spaces(self):
+        with self.client as client:
+            response = client.post(BASE_URL,json=dict(question='    '))
+            self.assertEqual(response.status_code,406)  
+
+    def test_invalid_question_posted_space(self):
+        with self.client as client:
+            response = client.post(BASE_URL,json=dict(question=''))
+            self.assertEqual(response.status_code,406)  
+
+
 
 #method below tests endpoint to post an answer such that the response is 201 for created
     def test_post_answer(self):
@@ -67,5 +79,18 @@ class QuestionsTestCase(unittest.TestCase):
     def test_question_not_found_for_post_answer(self):
         with self.client as client:
             client.post(BASE_URL,json=dict(question='What is exception handling?',answers=['this is the handling of unique situations']))
-            response = client.post(BASE_URL+'/5/answers',json=dict(answers='set of'))
+            response = client.post(BASE_URL+'/789/answers',json=dict(answers='set of'))
             self.assertEqual(response.status_code,404)
+
+    def test_invalid_posted_answer_spaces(self):
+        with self.client as client:
+            client.post(BASE_URL,json=dict(question='What is exception handling?',answers=['this is the handling of unique situations']))
+            response = client.post(BASE_URL+'/1/answers',json=dict(answers='     '))
+            self.assertEqual(response.status_code,406)
+
+    def test_invalid_posted_answer_space(self):
+        with self.client as client:
+            client.post(BASE_URL,json=dict(question='What is exception handling?',answers=['this is the handling of unique situations']))
+            response = client.post(BASE_URL+'/1/answers',json=dict(answers=''))
+            self.assertEqual(response.status_code,406)
+

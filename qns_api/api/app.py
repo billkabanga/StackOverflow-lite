@@ -28,7 +28,7 @@ class questions_handler(Resource):
             'question': request_data['question'],
             'answers': []
         }
-        if isinstance(request_data['question'], str):
+        if isinstance(request_data['question'], str) and not request_data['question'].isspace() and len(request_data['question'])>0:
             questions.append(new_question)
             return make_response(jsonify({'message':'Question has been added'}),201)
         return make_response(jsonify({'message':'Invalid input'}),406)
@@ -52,9 +52,11 @@ class add_answer(Resource):
         for question in questions:
             if question['qnId'] == qnId:
                 new_answer = request_data['answers']
-                question['answers'].append(new_answer)
-                return make_response(jsonify({'message':'Answer has been added'}),201)
-        return make_response(jsonify({'message': 'question not found'}),404)
+                if isinstance(request_data['answers'], str) and not new_answer.isspace() and len(new_answer)>0:
+                    question['answers'].append(new_answer)
+                    return make_response(jsonify({'message':'Answer has been added'}),201)
+                return make_response(jsonify({'message':'Invalid input'}),406)
+        return make_response(jsonify({'message':'Question not found'}),404)
 
 api.add_resource(add_answer, '/questions/<int:qnId>/answers')
 
