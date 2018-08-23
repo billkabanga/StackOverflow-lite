@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, Blueprint,make_response
 from flask_restful import Resource, Api
+import datetime
 
 
 #For versioning purposes, i initialise my blueprint with a name and a url prefix
@@ -26,7 +27,8 @@ class questions_handler(Resource):
         new_question = {
             'qnId': qnId,
             'question': request_data['question'],
-            'answers': []
+            'answers': [],
+            'post-time': datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
         }
         if isinstance(request_data['question'], str) and not request_data['question'].isspace() and len(request_data['question'])>0:
             questions.append(new_question)
