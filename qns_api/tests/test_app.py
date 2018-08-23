@@ -1,10 +1,10 @@
 import unittest
 import json
 from flask import request
-from api import create_app
-from api import app
-from instance.config import TestingConfig
-from api.models import questions
+from qns_api.api import create_app
+from qns_api.api import app
+from qns_api.instance.config import TestingConfig
+from qns_api.api.models import questions
 from flask import jsonify
 
 #setting my Base URL.
