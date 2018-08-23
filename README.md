@@ -42,7 +42,7 @@ Clone the remote repository to you local machine using the following command: `g
 
 You can now access the project on your local machine by pointing to the local repository using `cd` and `code .` if using Visual Studio code.
 Create a virtual environment in the local repository using the following code: `python -3 -m venv env`
-Activate the virtual environment: `env/Scripts/activate.bat`
+Activate the virtual environment: `env/Scripts/Activate.bat`
 
 
 

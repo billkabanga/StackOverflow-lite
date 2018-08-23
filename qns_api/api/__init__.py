@@ -1,6 +1,6 @@
 from flask import Flask
-from instance.config import DevelopmentConfig
-from api.app import my_blue_print
+from qns_api.instance.config import DevelopmentConfig
+from qns_api.api.app import my_blue_print
 
 #Function below creates the app,gives it a name,sets the configuration mode and registers my bluepritn that has the routes.
 def create_app(config_name):
