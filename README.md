@@ -67,7 +67,7 @@ Use the `pytest qns_api/tests --cov=qns_api/api --cov-report term-missing`  comm
 >These tests should be performed in the virtual environment
 
 ## Deployment:
-Heroku links: (https://bill-stack-over-flow.herokuapp.com/) (https://git.heroku.com/bill-stack-over-flow.git)
+Heroku links: (https://bill-stack-over-flow.herokuapp.com/api/v1/questions) (https://git.heroku.com/bill-stack-over-flow.git)
 
 ## Built with:
 **User Interface**
